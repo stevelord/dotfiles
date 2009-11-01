@@ -1,7 +1,8 @@
 set realname='Steve'
 
-set sendmail="/usr/bin/msmtp"
+mailboxes +inbox +snakeoillabs +gmail
 
+set sendmail="/usr/bin/msmtp"
 set edit_headers=yes
 set folder=~/mail
 set mbox=+mbox
@@ -10,5 +11,37 @@ set record=+sent
 set postponed=+drafts
 set mbox_type=Maildir
 
-mailboxes +inbox +snakeoillabs +gmail
+set alias_file=~/.mutt/aliases            # Keep aliases in this file.
+set postpone=ask-no                       # Ask about postponing.
+set postponed=+postponed                  # Where postponed messages live.
+set nomove                                # Hold messages in $MAIL.
+set print=ask-yes                         # Ask before printing.
+set delete=ask-yes                        # Ask before doing a delete.
+set include                               # Include the message in replies.
+set sort_aux=reverse-date-received                # Sort threads by date received.
+set charset=iso-8859-1                    # One of those days in England...
+set noallow_8bit                          # 8bit isn't safe via Demon.
+set attribution="* %n <%a> [%{%Y-%m-%d %H:%M:%S %Z}]:\n"
+set edit_headers                          # I want to edit the message headers.
+set nomark_old                            # Don't mark unread new msgs as old.
+set mbox=+mbox                            # Default mailbox.
+set copy                                  # Keep copies of outgoing mail...
+set record=+outbox                        # ... and it gets saved in =outbox.
+set nobeep                                # We don't need no beeping software.
+set nosmart_wrap                          # Don't want smart wrapping.
+set nomarkers                             # Don't want any wrap markers.
+set mime_forward                          # Forward message as MIME attachments.
+set pager_context=3                       # Display 3 lines of context in pager.
+set nostrict_threads                      # Lets have some fuzzy threading.
+set tilde                                 # Fill out messages with '~'.
+set read_inc=100                          # Read counter ticks every 100 msgs.
+set write_inc=100                         # Write counter ticks every 100 msgs.
+set noconfirmappend                       # Just append, don't hassle me.
+set pager_stop                            # Don't skip msgs on next page.
+set quote_regexp="^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set to_chars=" +TCF "                     # Drop the "L".
+
+source ~/.mutt/macros                     # Define macros.
+source ~/.mutt/colours                    # Define colours.
+source ~/.mutt/aliases                    # Load in my aliases.
 
