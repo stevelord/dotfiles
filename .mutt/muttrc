@@ -1,0 +1,14 @@
+set realname='Steve'
+
+set sendmail="/usr/bin/msmtp"
+
+set edit_headers=yes
+set folder=~/mail
+set mbox=+mbox
+set spoolfile=+inbox
+set record=+sent
+set postponed=+drafts
+set mbox_type=Maildir
+
+mailboxes +inbox +snakeoillabs +gmail
+
